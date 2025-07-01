@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Real-Time Weather Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="city">Enter City Name:</label>
+        <input type="text" id="city" name="city" placeholder="e.g., New York" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if prediction %}
+        <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
+
